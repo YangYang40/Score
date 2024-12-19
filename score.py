@@ -15,6 +15,19 @@ def count_fail(score_list):
 
   return total
 
+def count_max_min(score_list):
+  max = score_list[0]
+  min = score_list[0]
+  for i in score_list:
+    if i>max:
+      max = i
+    elif i < min:
+      min = i
+
+  return max,min
+
 score_list = input().split()
 answer = count_fail(score_list)
+max_num,min_num = count_max_min(score_list)
 print(answer)
+print("max_num = "+str(max_num)+" min_num = " + str(min_num))
